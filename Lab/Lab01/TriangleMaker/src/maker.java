@@ -23,7 +23,7 @@ public class maker {
 			System.out.println(str);
 			i += 1;
 		}
-		
+		System.exit(0);
 	}
 
 }

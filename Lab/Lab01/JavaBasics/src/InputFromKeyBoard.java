@@ -11,6 +11,7 @@ public class InputFromKeyBoard {
 		System.out.println("How tall are you (m)?");
 		double dHeight = keyBoard.nextDouble();
 		System.out.println("Mrs/Ms. " + strName + ", " + iAge + " years old. " + "Your height is " + dHeight + " m.");
+		System.exit(0);
 	}
-
+	
 }
