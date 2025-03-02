@@ -95,6 +95,6 @@ public class DisplayDaysofAMonth {
 			}
 		}
 		
-		
+		System.exit(0);
 	}
 }
