@@ -1,0 +1,19 @@
+Question 1: When should accessor methods be used?
+Khi nào nên sử dụng các phương thức truy cập?
+(answer)
+Chỉ dùng khi thật sự cần thiết.
+Khi có điều kiện nhập liệu cần được tiền xử lý.
+Khi dữ liệu không cần được bảo vệ, cho phép bên ngoài có thể truy cập
+Khi không vi phạm nguyên tắc đóng gói, nghĩa là thực hiện truy cập từ bên ngoài để thay đổi thuộc tính bên trong nhưng không làm thay đổi mã nguồn bên trong. Việc thực hiện truy cập như thế nào hoàn toàn do bên trong quyết định
+Khi muốn thay đổi cách xử lý dữ liệu bên trong mà không cần thay đổi mã nguồn bên ngoài.
+
+//Việc thực hiện các phương thức truy cập có thể hơi không phù hợp vơi tư duy hướng đối tượng. Vì bản thân đối tượng một số trường hợp không nên có phương thức hành động như lấy, thay đổi thông tin của chính bản thân dối tượng mà hành động này có lẽ phù hợp hơn với một đối tượng nào đó khác.
+
+Question 2:  If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this? 
+Nếu bạn đã tạo ra một phương thức khởi tạo tường minh để tạo một DVD bằng tiêu đề, sau đó lại tạo ra một phương thức khởi tạo tường minh bằng danh mục. JAVA có cho phép làm điều này không?
+(answer)
+JAVA không cho phép điều này. Đơn giản vì phương thức khởi tạo đơn giản là một phương thức, mà một phương thức bản chất là một hàm. 
+Hai hàm có thể phân biệt mà trùng trên khi thứ tự các kiểu dữ liệu hoặc kiểu dữ liệu tham số đầu vào là khác nhau. 
+Rõ ràng hai hàm đều có một tham số đầu vào là (String) cùng một kiểu dữ liệu. Do đó hai hàm bản chất là đang không phân biệt. 
+Hay có thể nói hai phương thức này đang không phân biệt nhau do vậy mà JAVA không thể phân biệt rằng khi gọi lệnh với tham số là một String nghĩa là mình đang gọi phương thức này hay phương thức kia.
+KẾT LUẬN: JAVA không cho phép và hầu hết các ngôn ngữ lập trình bậc cao cũng không cho phép.
