@@ -1,6 +1,6 @@
 Question 1: When should accessor methods be used?
 Khi nào nên sử dụng các phương thức truy cập?
-(answer)
+	(answer)
 Chỉ dùng khi thật sự cần thiết.
 Khi có điều kiện nhập liệu cần được tiền xử lý.
 Khi dữ liệu không cần được bảo vệ, cho phép bên ngoài có thể truy cập
@@ -11,9 +11,24 @@ Khi muốn thay đổi cách xử lý dữ liệu bên trong mà không cần th
 
 Question 2:  If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this? 
 Nếu bạn đã tạo ra một phương thức khởi tạo tường minh để tạo một DVD bằng tiêu đề, sau đó lại tạo ra một phương thức khởi tạo tường minh bằng danh mục. JAVA có cho phép làm điều này không?
-(answer)
-JAVA không cho phép điều này. Đơn giản vì phương thức khởi tạo đơn giản là một phương thức, mà một phương thức bản chất là một hàm. 
+	(answer)
+	JAVA không cho phép điều này. Đơn giản vì phương thức khởi tạo đơn giản là một phương thức, mà một phương thức bản chất là một hàm. 
 Hai hàm có thể phân biệt mà trùng trên khi thứ tự các kiểu dữ liệu hoặc kiểu dữ liệu tham số đầu vào là khác nhau. 
 Rõ ràng hai hàm đều có một tham số đầu vào là (String) cùng một kiểu dữ liệu. Do đó hai hàm bản chất là đang không phân biệt. 
 Hay có thể nói hai phương thức này đang không phân biệt nhau do vậy mà JAVA không thể phân biệt rằng khi gọi lệnh với tham số là một String nghĩa là mình đang gọi phương thức này hay phương thức kia.
 KẾT LUẬN: JAVA không cho phép và hầu hết các ngôn ngữ lập trình bậc cao cũng không cho phép.
+
+15. Passing parameter
+Question 3: Is JAVA a Pass by Value or a Pass by Reference programming language?  
+	answer: JAVA is a Pass by Value programming language.
+
+Question 4: After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two 
+objects still remain? 
+	(answer)
+	Vì JAVA là ngôn ngữ lập trình Pass by Value nên khi ta gọi hàm swap, bản chất nó sẽ tạo ra 2 biến tạm mới rồi Copy giá trị của 2 biến jungleDVD và cinderellaDVD vào đó nên nó không làm thay đổi giá trị của 2 biến.
+
+Question 5: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? 
+	(answer)
+	Vì do JAVA là một ngôn ngữ tổ chức dữ liệu theo kiểu biến object này chiếu đến và sử dụng một vùng bộ nhớ cho các thuộc tính. Và vùng nhớ này nằm ở đâu thì được xác định bởi giá trị của đối tượng đó nên bản chất thì JAVA đã chiếu đến vùng nhớ chứa title của biến JungleDVD và làm nó thay đổi.
+	Cái này tương tự như việc ta sử dụng con trỏ trong ngôn ngữ C.
+	Và khi ta lại gán jungleDVD bằng một object mới thì bản chất jungleDVD trong thủ tục này là một bản copy nên giá trị biến jungleDVD thực không bị thay đổi.
