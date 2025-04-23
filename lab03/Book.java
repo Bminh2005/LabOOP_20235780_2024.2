@@ -35,7 +35,7 @@ public class Book extends Media{
 	}
 	public String toString() {
 		String resultString = new String();
-		resultString = String.format("Book - %-25s - %-20s - %-15s - %3d : %8.2f $ ", this.getTitle(), this.getCategory(), this.getAuthors().get(0), null, this.getCost());
+		resultString = String.format("Book - %-25s - %-20s - %-15s - %3d : %8.2f $ ", this.getTitle(), this.getCategory(), null, null, this.getCost());
 		return resultString;
 	}
 }

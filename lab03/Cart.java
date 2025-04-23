@@ -95,6 +95,9 @@ public class Cart {
 		}
 	}
 	
+	public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
 	public void searchDVDs(String keyword) {
 		ArrayList<Media> list = new ArrayList<Media>();
 		for(int i = 0; i < this.itemsOrdered.size(); i++) {
@@ -118,5 +121,4 @@ public class Cart {
 			}
 		}
 	}
-	
 }

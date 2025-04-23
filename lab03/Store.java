@@ -4,8 +4,20 @@ import java.util.ArrayList;
 
 import hust.soict.hedspi.aims.media.Media;
 public class Store {
-	ArrayList<Media> itemsInStore = new ArrayList<Media>();
+	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 	
+	
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
+	public Media searchByTitle(String title) {
+		for(Media m: itemsInStore) {
+			if(m.isMatch(title)) {
+				return m;
+			}
+		}
+		return null;
+	}
 	public boolean addMedia(Media media) {
 		for(int i = 0; i < this.itemsInStore.size(); i++) {
 			if(this.itemsInStore.get(i).equals(media)) {

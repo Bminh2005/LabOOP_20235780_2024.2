@@ -1,11 +1,14 @@
 package hust.soict.hedspi.aims.media;
 
+import java.util.Comparator;
+
 public class Media {
 	int id;
 	String title;
 	String category;
 	float cost;
-	
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 	private static int nbMedias = 0;
 	
 	public Media() {
@@ -28,7 +31,11 @@ public class Media {
 		Media.nbMedias++;
 	}
 
-
+	public String toString() {
+		String resultString = new String();
+		resultString = String.format("Disc - %-25s - %-20s - %-15s - %3d : %8.2f $ ", this.getTitle(), this.getCategory(), null, null, this.getCost());
+		return resultString;
+	}
 
 	public int getId() {
 		return id;
