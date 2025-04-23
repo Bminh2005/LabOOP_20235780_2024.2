@@ -1,0 +1,18 @@
+1. Lớp nào nên implement giao diện Comparable?
+	Lớp đại diện cho đối tượng mà bạn muốn sắp xếp theo thứ tự tự nhiên nên implement Comparable<T>.
+	Trong trường hợp này, có thể là lớp Media, đại diện cho các mục trong giỏ hàng (DVD, sách, CD...).
+2. Cách triển khai phương thức compareTo() như thế nào?
+	Tự định nghĩa:
+	public int compareTo(Media other) 
+	Nếu trả về một số âm thì coi như Media this nhỏ hơn Media other
+	Nếu trả về 0 thì Media this bằng Media other
+	Nếu trả về một số dương thì coi như Media this lớn hơn Media other
+	Ta sắp xếp từ bé  dến lớn.
+3. Có thể có hai quy tắc sắp xếp khác nhau nếu dùng Comparable không?
+	Có, tự tạo 2 quy tắc sắp xếp như 2 thuộc tính hằng.
+	Tạo 2 phương thức sắp xếp khác nhau sử dụng List.sort(MediaList, thuộc tính hằng) với thuộc tính hằng khác nhau.
+4. Nếu DVD có quy tắc sắp xếp khác (tên, rồi độ dài giảm dần, rồi giá) thì làm sao?
+	Dơn giản ta viết hàm public int compareTo(Media other) trong một class dịnh nghĩa như sau:
+		Tính giá trị của TitleCompare nếu != 0 thì trả về
+		Nếu == 0 thì tính giá trị của lenghtCompare nêú != 0 trả về (-)lenghtCompare;
+							nếu == 0 thì tính costCompare rồi trả về giá trị của costCompare;
