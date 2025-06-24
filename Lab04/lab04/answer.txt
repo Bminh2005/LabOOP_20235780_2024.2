@@ -1,0 +1,12 @@
+So sánh Swing và AWT trong việc tạo UI
+
+| Tiêu chí                         | AWT (Abstract Window Toolkit)                    | Swing                                                  |
+|----------------------------------|--------------------------------------------------|--------------------------------------------------------|
+| Thư viện gốc                     | Thuộc 'java.awt.*'                               | Thuộc 'javax.swing.*'                                  |
+| Nền tảng                         | Dựa trên native GUI của hệ điều hành             | Lightweight (vẽ bằng Java, không phụ thuộc OS)         |
+| Hiệu năng & Giao diện            | Giao diện giản dị, thô sơ, phụ thuộc hệ điều hành| Giao diện hiện đại, đồng nhất, có thể tùy chỉnh        |
+| Tính năng nâng cao               | Hạn chế, ít component (nút, textbox cơ bản...)   | Đa dạng hơn: 'JTable', 'JTabbedPane', 'JTree',...      |
+| Khả năng mở rộng                 | Khó mở rộng, ít hỗ trợ                           | Dễ mở rộng, hỗ trợ MVC tốt hơn                         |
+| Tùy biến giao diện (Look & Feel) | Không hỗ trợ                                     | Hỗ trợ thay đổi giao diện (Look & Feel) dễ dàng        |
+| Độ ổn định & phổ biến            | Cũ, ít dùng trong thực tế hiện nay               | Phổ biến hơn, được dùng nhiều hơn                      |
+| Hỗ trợ Unicode                   | Giới hạn                                         | Tốt hơn                                                |
